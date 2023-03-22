@@ -15,7 +15,10 @@ opt-level = 3
 bevy = "0.10.0"
 bevy-inspector-egui = "0.18.1"
 leafwing-input-manager = "0.9.0"
-rapier2d = { version = "0.17.2", features = [
-    "simd-stable",
-    "debug-render",
-] }
+bevy_rapier2d = "0.21.0"
+
+# Repleace these with proper versions once they update to 0.10 support (SoonTM)
+bevy_ecs_ldtk = { git = "https://github.com/Trouv/bevy_ecs_ldtk", branch = "main" }
+
+[patch.crates-io]
+bevy_ecs_tilemap = { git = "https://github.com/geieredgar/bevy_ecs_tilemap", branch = "bevy_track" }

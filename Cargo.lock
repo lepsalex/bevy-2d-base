@@ -316,8 +316,9 @@ version = "0.1.0"
 dependencies = [
  "bevy",
  "bevy-inspector-egui",
+ "bevy_ecs_ldtk",
+ "bevy_rapier2d",
  "leafwing-input-manager",
- "rapier2d",
 ]
 
 [[package]]
@@ -534,6 +535,32 @@ dependencies = [
 ]
 
 [[package]]
+name = "bevy_ecs_ldtk"
+version = "0.5.0"
+source = "git+https://github.com/Trouv/bevy_ecs_ldtk?branch=main#d8e0c6d49462fe54d59567bc65863fcd14c880fd"
+dependencies = [
+ "anyhow",
+ "bevy",
+ "bevy_ecs_ldtk_macros",
+ "bevy_ecs_tilemap",
+ "hex",
+ "regex",
+ "serde",
+ "serde_json",
+ "thiserror",
+]
+
+[[package]]
+name = "bevy_ecs_ldtk_macros"
+version = "0.5.0"
+source = "git+https://github.com/Trouv/bevy_ecs_ldtk?branch=main#d8e0c6d49462fe54d59567bc65863fcd14c880fd"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 1.0.109",
+]
+
+[[package]]
 name = "bevy_ecs_macros"
 version = "0.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -543,6 +570,16 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn 1.0.109",
+]
+
+[[package]]
+name = "bevy_ecs_tilemap"
+version = "0.9.0"
+source = "git+https://github.com/geieredgar/bevy_ecs_tilemap?branch=bevy_track#b0a2924c0477806f0fb91b6afc44ad54e19f155d"
+dependencies = [
+ "bevy",
+ "log",
+ "regex",
 ]
 
 [[package]]
@@ -751,6 +788,19 @@ name = "bevy_ptr"
 version = "0.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a96c24da064370917b92c2a84527e6a73b620c50ac5ef8b1af8c04ccf5256a7c"
+
+[[package]]
+name = "bevy_rapier2d"
+version = "0.21.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "369c125de3d563a81174153af278dc2f761d0b10aed77eb9086dfa2e3ffa056b"
+dependencies = [
+ "bevy",
+ "bitflags",
+ "log",
+ "nalgebra",
+ "rapier2d",
+]
 
 [[package]]
 name = "bevy_reflect"
@@ -1958,6 +2008,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "hex"
+version = "0.4.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7f24254aa9a54b5c858eaee2f5bccdb46aaf0e486a595ed5fd8f86ba55232a70"
+
+[[package]]
 name = "hexasphere"
 version = "8.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2427,6 +2483,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d68d47bba83f9e2006d117a9a33af1524e655516b8919caac694427a6fb1e511"
 dependencies = [
  "approx",
+ "glam",
  "matrixmultiply",
  "nalgebra-macros",
  "num-complex",
@@ -2960,7 +3017,6 @@ dependencies = [
  "parry2d",
  "rustc-hash",
  "simba",
- "vec_map",
 ]
 
 [[package]]
